@@ -1,9 +1,11 @@
 import { createReducer, on} from '@ngrx/store'
 import { decrement, increment1, reset } from '../actions/counter.actions';
-import { initialState } from '../models/counter.state';
+import { initialState } from '../modal/counter.state';
+
+
 
 const _counterReducer = createReducer(initialState, 
-    on(increment1, (state) => {
+    on(increment1, (state) =>  {
         return {
             ...state,
             counter: state.counter + 1,

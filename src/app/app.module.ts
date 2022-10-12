@@ -1,26 +1,26 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CounterComponent } from './counter/counter/counter.component';
-import { CounterOutputComponent } from './counter/counter-output/counter-output.component';
-import { CounterButtonsComponent } from './counter/counter-buttons/counter-buttons.component';
 import { StoreModule } from '@ngrx/store'
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { counterReducer } from './counter/state/reducers/counter.reducer';
+import { counterReducer } from './store/reducers/counter.reducer';
+import { UserComponent } from './user/user.component';
+import { userFeatureKey, userReducer } from './store/reducers/user.reducer';
+import { reducers } from './store/reducers';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CounterComponent,
-    CounterOutputComponent,
-    CounterButtonsComponent
+    UserComponent,
   ],
   imports: [
     BrowserModule,
-    StoreModule.forRoot({counter: counterReducer}),
+    StoreModule.forRoot(reducers),
     StoreDevtoolsModule.instrument(),
     AppRoutingModule
   ],
