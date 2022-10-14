@@ -12,7 +12,7 @@ import { selectUsers } from '../store/selector/user.selector';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent {
-  users: Observable<User[]>;
+  users: any;
   constructor(private store: Store<UserState>) { 
   this.users = this.store.pipe(select(selectUsers));
  }

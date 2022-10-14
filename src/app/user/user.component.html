@@ -1,8 +1,8 @@
-<h4>List of Users</h4>
+<h3>List of Users</h3>
 <div *ngFor="let user of users | async; let i=index">
   <span >{{i+1}}.</span> {{user.name}}
 </div>
 
-<h4>Add New User</h4>
-<input #box >
-<button (click)="addUser(box.value)">Add</button>
+<h5>Add New User</h5>
+<input placeholder='enter name' #box >&nbsp;
+<button class="btn btn-secondary"  (click)="addUser(box.value)">Add</button>

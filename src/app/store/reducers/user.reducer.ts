@@ -11,7 +11,7 @@ export interface UserState {
 export const initialState: UserState = {
     users: []
     };
-    
+
 
 const _userReducer = createReducer(initialState, 
     on(addUser, (state:  UserState, {user}) => 
@@ -21,6 +21,6 @@ const _userReducer = createReducer(initialState,
         ))
     );
 
-export function userReducer(state: UserState, action:any) {
+export function userReducer(state: any, action:any) {
     return _userReducer(state, action);
 }

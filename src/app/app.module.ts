@@ -21,6 +21,9 @@ import { reducers } from './store/reducers';
   imports: [
     BrowserModule,
     StoreModule.forRoot(reducers),
+    // StoreModule.forRoot({counter: counterReducer}),
+    // StoreModule.forFeature(userFeatureKey, userReducer),
+    // StoreModule.forRoot(userReducer),
     StoreDevtoolsModule.instrument(),
     AppRoutingModule
   ],

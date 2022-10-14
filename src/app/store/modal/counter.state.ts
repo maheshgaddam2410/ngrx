@@ -1,3 +1,3 @@
-export const initialState = {
-    counter: 0
+export class Counter  {
+    counter = 0
 }
